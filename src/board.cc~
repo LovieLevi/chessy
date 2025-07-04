@@ -1,0 +1,7 @@
+#include "board.hh"
+
+namespace Board {
+	Board::Board(BoardStyle style) {
+		this->style = style;
+	}
+}

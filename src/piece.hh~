@@ -1,0 +1,36 @@
+#pragma once
+#include <string>
+#include <limits.h>
+
+namespace Piece {
+    enum PieceType {
+	PAWN,
+	KNIGHT,
+	BISHOP,
+	ROOK,
+	QUEEN,
+	KING,
+    };
+    
+    // Piece::PieceChars[(Piece::PieceType) pieceType]
+    // Returns the character representation of the piece.
+    const static char PieceChars[6] = {
+	'P', // Pawn
+	'N', // Knight
+	'B', // Bishop
+	'R', // Rook
+	'Q', // Queen
+	'K', // King
+    };
+    
+    // Piece::PieceWorths[(Piece::PieceType) pieceType]
+    // Returns the worth of the piece.
+    const static unsigned short PieceWorths[6] = {
+	1, // Pawn
+	3, // Knight
+	3, // Bishop
+	5, // Rook
+	9, // Queen
+	USHRT_MAX, // King (Infinity, but restricted to short limit)
+    };
+}

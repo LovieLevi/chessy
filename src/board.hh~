@@ -1,0 +1,21 @@
+#pragma once
+#include <iostream>
+
+namespace Board {
+    enum BoardStyle {
+    	BASIC,
+    	BASIC_WITH_SPACES,
+    	BASIC_WITH_BORDER,
+    };
+    
+    class Board {
+    private:
+    	BoardStyle style;
+    	
+    public:
+		const static int Size = 8;
+		
+    	Board(BoardStyle style);
+    	void DrawBoard();
+    };
+}
